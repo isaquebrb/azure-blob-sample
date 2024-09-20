@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: azure-blob-sample
+  cloud:
+    azure:
+      storage:
+        blob:
+          account-name: ${STORAGE_ACCOUNT_NAME:YOUR_EMULATOR_AZURE_ACCOUNT}
+          account-key: ${STORAGE_ACCOUNT_KEY:YOUR_EMULATOR_AZURE_ACCOUNT_KEY}
+          endpoint: ${STORAGE_BLOB_ENDPOINT:YOUR_EMULATOR_AZURE_ENDPOINT}
+  servlet:
+    multipart:
+      max-file-size: ${MAX_UP_FILE_SIZE:30MB}
+      max-request-size: ${MAX_DOWN_FILE_SIZE:30MB}
+azure:
+  storage:
+      blob:
+        container: ${STORAGE_CONTAINER_NAME:sample-files}
